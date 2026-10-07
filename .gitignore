@@ -1,0 +1,66 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+# -----------------------------------------------
+# Entorno de Android Studio e IntelliJ
+# -----------------------------------------------
+.idea/
+*.iml
+*.iws
+workspace.xml
+tasks.xml
+gradle.xml
+dictionaries/
+shelf/
+
+# -----------------------------------------------
+# Archivos de Gradle y Builds
+# -----------------------------------------------
+.gradle/
+build/
+*/build/
+gradle-app.setting
+
+# -----------------------------------------------
+# Archivos locales de tu computadora (SDK, paths)
+# -----------------------------------------------
+local.properties
+
+# -----------------------------------------------
+# Archivos generados de la aplicación
+# -----------------------------------------------
+*.apk
+*.ap_
+*.aab
+*.dex
+*.class
+bin/
+gen/
+out/
+
+# -----------------------------------------------
+# Logs y Archivos Temporales
+# -----------------------------------------------
+*.log
+captures/
+.navigation/
+.cxx/
+.externalNativeBuild/
+
+# -----------------------------------------------
+# Sistema Operativo (Opcional, pero recomendado)
+# -----------------------------------------------
+.DS_Store
+Thumbs.db
