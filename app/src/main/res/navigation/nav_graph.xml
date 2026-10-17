@@ -3,26 +3,69 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/seleccionEmpresaFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.example.proyecto_grupo_3.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        android:id="@+id/seleccionEmpresaFragment"
+        android:name="com.example.proyecto_grupo_3.SeleccionEmpresaFragment"
+        android:label="Selección de Empresa"
+        tools:layout="@layout/fragment_seleccion_empresa">
 
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_seleccionEmpresaFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
+
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.example.proyecto_grupo_3.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        android:id="@+id/loginFragment"
+        android:name="com.example.proyecto_grupo_3.LoginFragment"
+        android:label="Inicio de Sesión"
+        tools:layout="@layout/fragment_login">
+
+        <argument
+            android:name="empresa_id"
+            app:argType="integer"
+            android:defaultValue="-1" />
+        <argument
+            android:name="empresa_nombre"
+            app:argType="string"
+            android:defaultValue="" />
+        <argument
+            android:name="empresa_desc"
+            app:argType="string"
+            android:defaultValue="" />
+        <argument
+            android:name="empresa_icon"
+            app:argType="integer"
+            android:defaultValue="0" />
 
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_loginFragment_to_menuPrincipalFragment"
+            app:destination="@id/menuPrincipalFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/menuPrincipalFragment"
+        android:name="com.example.proyecto_grupo_3.MenuPrincipalFragment"
+        android:label="Menú Principal"
+        tools:layout="@layout/fragment_menu_principal">
+
+        <argument
+            android:name="usuario_nombre"
+            app:argType="string"
+            android:defaultValue="Usuario" />
+        <argument
+            android:name="usuario_rol"
+            app:argType="string"
+            android:defaultValue="Solicitante" />
+        <argument
+            android:name="empresa_nombre"
+            app:argType="string"
+            android:defaultValue="" />
+
+        <action
+            android:id="@+id/action_menuPrincipalFragment_to_seleccionEmpresaFragment"
+            app:destination="@id/seleccionEmpresaFragment" />
+    </fragment>
+
 </navigation>
