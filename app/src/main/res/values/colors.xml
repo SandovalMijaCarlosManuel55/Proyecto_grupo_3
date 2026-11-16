@@ -2,13 +2,34 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="primary_blue">#1E88E5</color>
-    <color name="dark_blue">#0A3D91</color>
-    <color name="light_blue_bg">#F0F7FF</color>
-    <color name="icon_circle_bg">#E3F2FD</color>
-    <color name="stroke_selected">#1E88E5</color>
-    <color name="stroke_normal">#E0E0E0</color>
-    <color name="text_primary">#1A1A1A</color>
-    <color name="text_secondary">#666666</color>
-    <color name="header_subtitle">#D0E3FF</color>
+
+    <!-- Marca -->
+    <color name="primario">#1E3A6E</color>
+    <color name="primario_contenedor">#D8E2FF</color>
+    <color name="secundario">#8B1A1A</color>
+    <color name="fondo">#F4F6FA</color>
+    <color name="texto_secundario">#5F6368</color>
+
+    <!-- Prioridad: rojo=Alta, naranja=Media, verde=Baja -->
+    <color name="prioridad_alta">#D32F2F</color>
+    <color name="prioridad_media">#F57C00</color>
+    <color name="prioridad_baja">#388E3C</color>
+
+    <!-- Estados del incidente -->
+    <color name="estado_abierto">#1976D2</color>
+    <color name="estado_en_proceso">#7B1FA2</color>
+    <color name="estado_resuelto">#2E7D32</color>
+    <color name="estado_cerrado">#757575</color>
+    <color name="estado_pendiente">#6D4C41</color>
+    <color name="estado_error">#C62828</color>
+
+    <!-- Semáforo SLA -->
+    <color name="sla_verde">#43A047</color>
+    <color name="sla_amarillo">#FBC02D</color>
+    <color name="sla_rojo">#E53935</color>
+
+    <color name="banner_offline">#424242</color>
+
+    <!-- Marcador de técnico en el mapa (azul) -->
+    <color name="marcador_tecnico">#2196F3</color>
 </resources>

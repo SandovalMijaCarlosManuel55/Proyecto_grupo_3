@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.DetalleIncidenteFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/margen_formulario"
+            android:paddingTop="4dp"
+            android:paddingBottom="24dp">
+
+            <!-- ===== Encabezado: ticket, prioridad, estado, título y SLA ===== -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Tarjeta"
+                app:cardBackgroundColor="?attr/colorPrimary">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/txtTicket"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:alpha="0.85"
+                            android:text="#INC-0001"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chipPrioridad"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:text="Alta"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            app:chipMinHeight="28dp"
+                            app:chipStrokeWidth="0dp" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/txtEstado"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:background="@drawable/fondo_estado"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="4dp"
+                            android:text="Abierto"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txtTitulo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Título del incidente"
+                        android:textAppearance="?attr/textAppearanceTitleLarge"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <!-- Semáforo SLA (píldora blanca) -->
+                    <LinearLayout
+                        android:id="@+id/layoutSla"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/fondo_estado"
+                        android:backgroundTint="@color/white"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="6dp">
+
+                        <View
+                            android:id="@+id/indicadorSla"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:background="@drawable/circulo" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/txtSla"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="SLA: quedan 3h 0m"
+                            android:textColor="?attr/colorPrimary"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ===== Información del incidente ===== -->
+            <com.google.android.material.card.MaterialCardView style="@style/Tarjeta">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/TituloSeccion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_descripcion"
+                        android:text="Descripción" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txtDescripcion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:lineSpacingExtra="2dp"
+                        android:text="Descripción detallada del incidente" />
+
+                    <include
+                        android:id="@+id/datoCategoria"
+                        layout="@layout/item_dato" />
+
+                    <include
+                        android:id="@+id/datoSucursal"
+                        layout="@layout/item_dato" />
+
+                    <include
+                        android:id="@+id/datoEquipo"
+                        layout="@layout/item_dato" />
+
+                    <include
+                        android:id="@+id/datoSolicitante"
+                        layout="@layout/item_dato" />
+
+                    <include
+                        android:id="@+id/datoTecnico"
+                        layout="@layout/item_dato" />
+
+                    <include
+                        android:id="@+id/datoRegistro"
+                        layout="@layout/item_dato" />
+
+                    <include
+                        android:id="@+id/datoResolucion"
+                        layout="@layout/item_dato" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ===== Fotos (tocar para ver en tamaño completo) ===== -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardFotos"
+                style="@style/Tarjeta">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/TituloSeccion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_foto"
+                        android:text="Fotos (toque para ampliar)" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/alto_foto_detalle"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/imgFoto1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/primario_contenedor"
+                            android:contentDescription="Foto 1 del incidente"
+                            android:scaleType="centerCrop"
+                            app:shapeAppearanceOverlay="@style/FotoRedondeada" />
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/imgFoto2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="1"
+                            android:background="@color/primario_contenedor"
+                            android:contentDescription="Foto 2 del incidente"
+                            android:scaleType="centerCrop"
+                            app:shapeAppearanceOverlay="@style/FotoRedondeada" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ===== Acciones (se muestran según el rol) ===== -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardAcciones"
+                style="@style/Tarjeta">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/TituloSeccion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_tecnico"
+                        android:text="Gestión del incidente" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnCambiarEstado"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:text="Cambiar estado"
+                        app:icon="@drawable/ic_editar" />
+
+                    <!-- Solo Administrador: cambiar la prioridad del incidente -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnCambiarPrioridad"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Cambiar prioridad"
+                        android:visibility="gone"
+                        app:icon="@drawable/ic_categoria" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnVerificarQr"
+                            style="@style/Widget.Material3.Button.TonalButton"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:layout_weight="1"
+                            android:text="Verificar QR"
+                            app:icon="@drawable/ic_qr" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnComoLlegar"
+                            style="@style/Widget.Material3.Button.TonalButton"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Cómo llegar"
+                            app:icon="@drawable/ic_como_llegar" />
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnAsignar"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Asignar técnico"
+                        app:icon="@drawable/ic_persona" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ===== Historial (línea de tiempo) y comentario ===== -->
+            <com.google.android.material.card.MaterialCardView style="@style/Tarjeta">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/TituloSeccion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_historial"
+                        android:text="Historial" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvHistorial"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilComentario"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:hint="Agregar comentario"
+                        app:boxCornerRadiusBottomEnd="24dp"
+                        app:boxCornerRadiusBottomStart="24dp"
+                        app:boxCornerRadiusTopEnd="24dp"
+                        app:boxCornerRadiusTopStart="24dp"
+                        app:endIconContentDescription="Enviar comentario"
+                        app:endIconDrawable="@drawable/ic_enviar"
+                        app:endIconMode="custom"
+                        app:endIconTint="?attr/colorPrimary">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtComentario"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine|textCapSentences" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Cargando (mientras tanto se muestran los datos guardados en Room) -->
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progressDetalle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="gone" />
+
+    <!-- Error cuando no hay datos guardados -->
+    <LinearLayout
+        android:id="@+id/layoutError"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/fondo"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:contentDescription="Error"
+            android:src="@drawable/ic_error"
+            app:tint="@color/estado_error" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="No se pudo cargar el incidente" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnReintentar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Reintentar" />
+    </LinearLayout>
+</FrameLayout>

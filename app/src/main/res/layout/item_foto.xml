@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="120dp"
+    android:layout_height="120dp"
+    android:layout_marginEnd="12dp">
+
+    <!-- Miniatura de la foto antes de enviar -->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgFoto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="Foto del incidente"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Medium" />
+
+    <ImageButton
+        android:id="@+id/btnQuitar"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="top|end"
+        android:layout_margin="4dp"
+        android:background="@drawable/circulo"
+        android:backgroundTint="#99000000"
+        android:contentDescription="Quitar foto"
+        android:src="@drawable/ic_cerrar" />
+</FrameLayout>

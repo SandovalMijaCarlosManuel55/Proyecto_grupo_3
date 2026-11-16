@@ -1,42 +1,12 @@
 <resources>
     <string name="app_name">IncidentApp</string>
-    <string name="action_settings">Settings</string>
-
-    <!-- Header strings -->
-    <string name="incident_app_title">IncidentApp</string>
-    <string name="incident_app_subtitle">Gestión de incidentes de TI</string>
-
-    <!-- Company selection strings -->
-    <string name="select_company_title">Selecciona tu empresa</string>
-    <string name="select_company_desc">Elige la empresa a la que perteneces para continuar con el inicio de sesión</string>
-    <string name="btn_continuar">Continuar</string>
-    <string name="error_select_company">Por favor, selecciona una empresa para continuar</string>
-
-    <!-- Login strings -->
-    <string name="login_header_title">Inicio de sesión</string>
-    <string name="login_title">Ingresa tus datos</string>
-    <string name="selected_company_label">Empresa seleccionada:</string>
-    <string name="company_id_label">ID Empresa: %1$d</string>
-    <string name="company_label">Empresa: %1$s</string>
-    <string name="email_label">Correo electrónico</string>
-    <string name="email_hint">usuario@empresa.com</string>
-    <string name="password_label">Contraseña</string>
-    <string name="password_hint">Ingresa tu contraseña</string>
-    <string name="btn_iniciar_sesion">Iniciar sesión</string>
-    <string name="forgot_password">¿Olvidaste tu contraseña?</string>
-    <string name="forgot_password_msg">Instrucciones de recuperación enviadas a tu correo corporativo</string>
-    <string name="security_notice">Tu información está protegida. Solo puedes acceder a los datos de tu empresa.</string>
-
-    <!-- Validation and Error strings -->
-    <string name="error_empty_fields">Por favor completa todos los campos</string>
-    <string name="error_invalid_email">Ingresa un correo electrónico válido</string>
-    <string name="error_auth_failed">Correo o contraseña incorrectos</string>
-    <string name="error_account_inactive">Cuenta o empresa inactiva. Contacta al administrador</string>
-    <string name="login_success">¡Bienvenido a IncidentApp!</string>
-
-    <!-- Main Menu strings -->
-    <string name="main_menu_title">Menú Principal</string>
-    <string name="welcome_user">Bienvenido, %1$s</string>
-    <string name="role_label">Rol: %1$s</string>
-    <string name="logout">Cerrar sesión</string>
+    <string name="app_descripcion">Sistema Móvil de Gestión de Incidentes TI</string>
+    <string name="titulo_lista">Incidentes</string>
+    <string name="titulo_nuevo">Nuevo incidente</string>
+    <string name="titulo_detalle">Detalle del incidente</string>
+    <string name="titulo_mapa">Mapa de sucursales</string>
+    <string name="titulo_perfil">Mi perfil</string>
+    <string name="titulo_metricas">Reportes y métricas</string>
+    <string name="cerrar_sesion">Cerrar sesión</string>
+    <string name="copyright">© 2026 USAT · Desarrollo de Aplicaciones Móviles</string>
 </resources>

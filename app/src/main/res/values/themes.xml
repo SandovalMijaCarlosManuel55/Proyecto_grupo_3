@@ -1,9 +1,12 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.Proyecto_grupo_3" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+<resources>
+    <!-- Tema Material Design 3 -->
+    <style name="Base.Theme.IncidentApp" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/primario</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/primario_contenedor</item>
+        <item name="colorSecondary">@color/secundario</item>
+        <item name="android:colorBackground">@color/fondo</item>
     </style>
 
-    <style name="Theme.Proyecto_grupo_3" parent="Base.Theme.Proyecto_grupo_3" />
+    <style name="Theme.IncidentApp" parent="Base.Theme.IncidentApp" />
 </resources>

@@ -1,10 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Menú según el rol (MainActivity.onPrepareOptionsMenu):
+     Administrador: Mapa + Métricas + Perfil + Cerrar sesión (menú completo)
+     Técnico y Solicitante: Mapa + Perfil + Cerrar sesión -->
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.proyecto_grupo_3.MainActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- Los ids son los mismos de los destinos del nav_graph: NavigationUI navega solo -->
     <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:id="@+id/mapaFragment"
+        android:icon="@drawable/ic_ubicacion"
+        android:title="@string/titulo_mapa"
+        app:iconTint="?attr/colorOnPrimary"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/metricasFragment"
+        android:icon="@drawable/ic_metricas"
+        android:title="@string/titulo_metricas"
+        app:iconTint="?attr/colorOnPrimary"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/perfilFragment"
+        android:icon="@drawable/ic_persona"
+        android:title="@string/titulo_perfil"
+        app:iconTint="?attr/colorOnPrimary"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_cerrar_sesion"
+        android:icon="@drawable/ic_logout"
+        android:title="@string/cerrar_sesion"
         app:showAsAction="never" />
 </menu>

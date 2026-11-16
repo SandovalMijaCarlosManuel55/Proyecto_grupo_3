@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "490972217144",
+    "project_id": "incidentapp-86327",
+    "storage_bucket": "incidentapp-86327.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:490972217144:android:e0efb866598834dad14bcd",
+        "android_client_info": {
+          "package_name": "pe.edu.usat.incidentapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdebClTQSWGiIP6yp5iujl8T_xGdWZjGU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
